@@ -82,10 +82,10 @@ function renderRealCart() {
 
 function deleteItem(index) {
   let cart = JSON.parse(localStorage.getItem("cart"))
-  alert(`bạn muốn xoá ${list[index - 1].name} ra khỏi giỏ hàng?`);
+  if(confirm(`bạn muốn xoá ${list[index - 1].name} ra khỏi giỏ hàng?`)){
   localStorage.removeItem(`${list[index - 1].name}`);
-  console.log(cart);
   let newCart = cart.filter(el=> {return el.id != index})
   localStorage.setItem("cart", JSON.stringify(newCart))
     location.reload();
+  }
 }
