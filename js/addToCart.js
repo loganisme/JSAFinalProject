@@ -75,7 +75,7 @@ function renderRealCart() {
     document.getElementById("payment-button").style.display = "none"
   }
   else{
-    table.innerHTML+=`   <h1>TOTAL : ${total}</h1>`
+    table.innerHTML+=`   <h1>TOTAL : ${total}đ</h1>`
     document.getElementById("payment-button").style.display = "block"
   }
 }
