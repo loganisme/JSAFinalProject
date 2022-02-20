@@ -4,9 +4,9 @@
   box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
 }
-.sticky {
-    position: fixed;
-    top: 0;
+#header-wrapper {
+    position: sticky;
+    top: 0px;
     width: 1170px;
 }
 
@@ -31,14 +31,14 @@ html {
   height: 50px;
 
 }
-header #header-wrapper .main-header li a {
+#header-wrapper .main-header li a {
   text-decoration: none;
   color: aliceblue;
   margin: 5px;
   border-left: 1px black;
   font-size: 1.5rem;
 }
-header #header-wrapper .main-header li a::after {
+#header-wrapper .main-header li a::after {
   content: "";
   width: 1px;
   border-left: 1px solid rgba(0, 0, 0, 0.1);

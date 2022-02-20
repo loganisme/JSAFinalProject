@@ -24,22 +24,48 @@
     <div class="top-header">
       <img src="./resources/logo.gif" alt="" />
     </div>
-    <div id="header-wrapper">
-      <ul class="main-header">
-        <li class="header-li"><a href="./home.html">TRANG CHỦ</a></li>
-        <li class="header-li"><a href="./intro.html">GIỚI THIỆU</a></li>
-        <li class="header-li"><a href="./shop.html">SẢN PHẨM</a></li> 
-        <li class="header-li"><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-    </div>
   </header>
+  <div id="header-wrapper">
+    <ul class="main-header">
+      <li class="header-li"><a href="./home.html">TRANG CHỦ</a></li>
+      <li class="header-li"><a href="./intro.html">GIỚI THIỆU</a></li>
+      <li class="header-li"><a href="./shop.html">SẢN PHẨM</a></li>
+    <li class="header-li"><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+    </ul>
+  </div>
     <div id="item">
 
     </div>
  
         <input type="number" name="quantity" id="quantity" min="1" max="10">
         <input type="submit" value="add to cart"onclick="addToCart()">
-        
+        <footer>
+          <div class="main-footer">
+            <h3>Thông tin chung</h3>
+            <ul class="footer-ul">
+              <li><a href="./home.html">Giới thiệu Công ty</a></li>
+              <li>Năng lực sản xuất</li>
+              <li>Thư ngỏ đối tác</li>
+              <li><a href="./shop.html">Bán hàng</a></li>
+              <li>Hướng dẫn đặt hàng</li>
+              <li>Hình thức thanh toán</li>
+              <li>Quy trình thực hiện</li>
+              <li>Dịch vụ chuyển SHIP COD</li>
+            </ul>
+            <div class="footer-img">
+              <img src="./resources/footer-bg-1024x262.png" alt="" />
+            </div>
+          </div>
+          <div class="extra-footer">
+            <div class="extra-footer-nav">
+              <ul class="extra-ul">
+                <li class="extra-li"><a href="./home.html">Trang chủ</a></li>
+                <li class="extra-li"><a href="./intro.html">Giới thiệu</a></li>
+                <li class="extra-li"><a href="./shop.html">Sản phẩm</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
     <script>
       localStorage.setItem("shopList", JSON.stringify([{id:1,name:"Nhà chơi cầu trượt Hàn Quốc cho bé kèm bàn ghế",price:6270000,img:"https://sudospaces.com/babycuatoi/2020/03/hn777-nha-choi-han-quoc-bbt-global-cho-eb-2-medium.jpg"},
 {id:2,name:"Đồ chơi xếp hình xe ô tô cho bé trai",price:129000,img:"https://sudospaces.com/babycuatoi/2021/12/5105-medium.png"},
@@ -63,7 +89,6 @@
     `
         }
     </script>
-      <script src="./js/app.js"></script>
       <script src="./js/addToCart.js"></script>
 </body>
 </html>
