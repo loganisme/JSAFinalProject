@@ -1,14 +1,19 @@
 function validateForm() {
+  const phoneNumRegex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+  const emailRegex =/^([a-z0-9])+(@gmail\.com)$/gm
     let name = document.getElementById("fname").value
     let email = document.getElementById("email").value
     let adr = document.getElementById("adr").value
     let city = document.getElementById("city").value
     let phone = document.getElementById("phone").value
+    if (phoneNumRegex.test(phone)&& emailRegex.test(email)) {alert("đặt hàng thành công")
     localStorage.setItem("user", JSON.stringify({name : name,email:email,adr : adr , city:city , phone: phone}))
     window.location("/PROJECTJSA/success.html")
+    }else{
+      alert("vui lòng nhập đúng số điện thoại hoặc email")
+    }
 
 }
-
 function renderCart(){
     let table = document.getElementById("table");
     let cart = [];
