@@ -8,7 +8,7 @@ function validateForm() {
     let phone = document.getElementById("phone").value
     if (phoneNumRegex.test(phone)&& emailRegex.test(email)) {alert("đặt hàng thành công")
     localStorage.setItem("user", JSON.stringify({name : name,email:email,adr : adr , city:city , phone: phone}))
-    window.location("/PROJECTJSA/success.html")
+    window.location.href = "./success.html"
     }else{
       alert("vui lòng nhập đúng số điện thoại hoặc email")
     }
@@ -32,6 +32,7 @@ function renderCart(){
       total+=cart[j][0].price
       table.innerHTML += `
   <div class="item">
+  <img src="${cart[j][0].img}" width="100rem" alt="">
       <h5>${cart[j][0].name}</h5>
       <P>quantity : ${cart[j][0].quantity}</P>
       <p>price: ${cart[j][0].price}đ</p>

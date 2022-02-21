@@ -22,19 +22,20 @@ function renderBill(){
       total+=cart[j][0].price
       bill.innerHTML += `
   <div class="item">
+  <img src="${cart[j][0].img}" width="70rem" alt="">
       <h5>${cart[j][0].name}</h5>
       <P>quantity : ${cart[j][0].quantity}</P>
       <p>price: ${cart[j][0].price}đ</p>
     </div> <br> `;
     
     }
-    bill.innerHTML +=`<h3>Tổng số tiền phải trả ${total}VNĐ</h3> ` 
+    bill.innerHTML +=`<h3>Tổng số tiền phải trả ${total}VNĐ</h3><hr> ` 
     resetLocalStorage()    
 }
 
 function backToHome() {
     resetLocalStorage()
-    window.location.assign("/PROJECTJSA/home.html")
+    window.location.href ="./home.html"
     alert("cảm ơn khách hàng đã mua tin tưởng mua sắm <3")
 }
 
@@ -43,6 +44,6 @@ function resetLocalStorage() {
 }
 function shopMore(){
     resetLocalStorage()
-    window.location.assign("/PROJECTJSA/shop.html")
+    window.location.href = "./shop.html"
     alert("cảm ơn khách hàng đã mua tin tưởng mua sắm <3")
 }
