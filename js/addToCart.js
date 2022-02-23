@@ -18,8 +18,10 @@ function addToCart() {
     ? JSON.parse(localStorage.getItem("cart"))
     : [];
   let realCart = [];
-  if (quantity === "") {
-    alert("vui lòng nhập số lượng");
+  if (quantity === "" ) {
+    alert("vui lòng nhập số lượng");}
+  else if ( quantity < 0 ) {
+      alert("vui lòng nhập số lượng > 0");
   } else {
     alert(`đã thêm ${list[idex - 1].name} vào giỏ hàng`);
     cart.push({
@@ -66,16 +68,18 @@ function renderRealCart() {
     <img src="${cart[j][0].img}" alt="">
     <h3>${cart[j][0].name}</h3>
     <P>quantity : ${cart[j][0].quantity}</P>
-    <p>price: ${cart[j][0].price}đ</p>
-  <i class="fas fa-trash" onclick="deleteItem(${cart[j][0].id})"></i>
+    <p>total: ${cart[j][0].price}đ</p>
+  <i style="transform: translate(700%);font-size: 22px;" class="fas fa-trash" onclick="deleteItem(${cart[j][0].id})"></i>
  
   </div>`;
   }
   if(table.innerHTML == ""){
     document.getElementById("payment-button").style.display = "none"
+    document.getElementById("total").style.border ="none"
+    table.innerHTML = `<h1 style="text=align:center;    margin: 153px;" >Chưa có sản phầm nào trong giỏ hàng ! Vui lòng đi mua sắm</h1>`
   }
   else{
-    table.innerHTML+=`   <h1>TOTAL : ${total}đ</h1>`
+    document.getElementById("total").innerHTML =`  <h1>TOTAL : ${total}đ</h1>`
     document.getElementById("payment-button").style.display = "block"
   }
 }

@@ -10,26 +10,26 @@ function renderBill(){
       }
     }
     bill.innerHTML += `    
-    <h4>Tên khách hàng : ${userDetails.name}</h4>
-    <h4>Số điện thoại đặt hàng : ${userDetails.phone}</h4>
-    <h4>Địa chỉ : ${userDetails.adr}</h4>
-    <h4>Thành phố : ${userDetails.city} </h4>
-    <h4>Emails : ${userDetails.email}</h4>
+    <h3>Tên khách hàng : ${userDetails.name}</h3>
+    <h3>Số điện thoại đặt hàng : ${userDetails.phone}</h3>
+    <h3>Địa chỉ : ${userDetails.adr}</h3>
+    <h3>Thành phố : ${userDetails.city} </h3>
+    <h3>Emails : ${userDetails.email}</h3>
     <hr>
-    <h2>ĐƠN HÀNG CỦA BẠN</h2>
+    <h1>ĐƠN HÀNG CỦA BẠN</h1>
     `
     for (let j = 0; j < cart.length; j++) {
       total+=cart[j][0].price
       bill.innerHTML += `
   <div class="item">
-  <img src="${cart[j][0].img}" width="70rem" alt="">
-      <h5>${cart[j][0].name}</h5>
+  <img src="${cart[j][0].img}"alt="">
+      <h3>${cart[j][0].name}</h3>
       <P>quantity : ${cart[j][0].quantity}</P>
       <p>price: ${cart[j][0].price}đ</p>
     </div> <br> `;
     
     }
-    bill.innerHTML +=`<h3>Tổng số tiền phải trả ${total}VNĐ</h3><hr> ` 
+    bill.innerHTML +=`<h1 style="color:#660000;text-align:center;font-size: 24px;border:10px solid black;padding: 2rem 1rem;min-height: 3em;background: #ffd73e33;">Tổng số tiền phải trả ${total}VNĐ ✨</h1><hr> ` 
     resetLocalStorage()    
 }
 

@@ -15,7 +15,7 @@ function validateForm() {
 
 }
 function renderCart(){
-    let table = document.getElementById("table");
+    let table = document.getElementById("checkout-cart");
     let cart = [];
     let total = 0
     for (let i = 0; i < list.length; i++) {
@@ -31,14 +31,14 @@ function renderCart(){
     for (let j = 0; j < cart.length; j++) {
       total+=cart[j][0].price
       table.innerHTML += `
-  <div class="item">
+  <div>
   <img src="${cart[j][0].img}" width="100rem" alt="">
       <h5>${cart[j][0].name}</h5>
       <P>quantity : ${cart[j][0].quantity}</P>
       <p>price: ${cart[j][0].price}đ</p>
-    </div> <br> `;
+    </div> <hr><br> `;
     
     }
-    table.innerHTML +=`          <hr>
-    <p>Total <span class="price" style="color:black"><b>${total}đ</b></span></p>`
+    table.innerHTML +=`
+    <p>Total: <span class="price" style="color:black"><b>${total}đ</b></span></p>`
 }

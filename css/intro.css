@@ -117,3 +117,50 @@ footer .main-footer ul {
 .main-content{
     height: 110rem;
 }
+
+.item{
+  width: 18rem;
+    border: solid 1px;
+    background: beige;
+    margin: 15px;
+}
+#shop-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item img {
+  height: 286px;
+}
+a:link{
+  color: chocolate;
+}
+.item h3,p{
+  text-align: center;
+} 
+input[type=button], input[type=submit], input[type=reset], button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 30px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.margin_left30{
+  margin-left: 28rem;
+}
+#table{
+  display: flex;
+  flex-wrap: wrap;
+}
+#total-pay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#total{
+  margin: 20px;
+  border: #009900 solid 1px;
+  padding: 20px
+}

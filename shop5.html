@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>    <link rel="stylesheet" href="./css/intro.css" />
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đồ chơi búp bê 51cm thân mềm cho bé</title>
+    <title>Nhà chơi cầu trượt Hàn Quốc cho bé kèm bàn ghế</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://babycuatoi.vn/favicon.ico"
@@ -17,7 +17,7 @@
       integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> <link rel="stylesheet" href="./css/intro.css" />
   </head>
 <body onload="renderItem()">
   <header>
@@ -33,13 +33,12 @@
     <li class="header-li"><a href="./cart.html"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
   </div>
-    <div id="item">
+    <div id="shop-menu">
 
     </div>
 
-        <input type="number" name="quantity" id="quantity" min="1" max="10">
-        <input type="submit" value="add to cart"onclick="addToCart()">
-        
+        <input class="margin_left30" type="number" name="quantity" id="quantity">
+        <input class="btn" type="submit" value="add to cart" onclick="addToCart()">
         <footer>
           <div class="main-footer">
             <h3>Thông tin chung</h3>
@@ -82,14 +81,14 @@
         let items = JSON.parse(localStorage.getItem("shopList"))
         console.log(items);
         function renderItem(){
-            document.getElementById("item").innerHTML += `
+            document.getElementById("shop-menu").innerHTML += `<div class="item">
             <img src="${items[5].img}" alt="">
     <h3>${items[5].name}</h3>
-    <p>${items[5].price}đ</p>
-    <input id="item-number" type="hidden" value="${items[5].id}">
-    `
+    <p>${items[5].price}đ/piece</p></div>
+    <input id="item-number" type="hidden" value="${items[5].id}">`
         }
+      
     </script>
       <script src="./js/addToCart.js"></script>
-  </body>
+</body>
 </html>
