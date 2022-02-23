@@ -124,20 +124,40 @@ footer .main-footer ul {
   width: 18rem;
     border: solid 1px;
     background: beige;
-    margin: 15px;
 }
 #shop-menu{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+a:link {color: #000000}
+a:visited {color: #000000}
+a:hover {color: #000000}
+a:active {color: #000000}
 .item img {
+  height: 286px;}
+#shop-menu a .item img {
+  height: 286px;
+  transform: scale(1);
+  opacity: 0.85;
+  transition: 0.75s;
+}
+#shop-menu a .item img:hover{
+opacity: 1;
+transform: scale(1.25);
+}
+#shop-menu a{
+margin: 30px;
+}
+#shop-menu a .item .main-img{
+  background-color: black;
+  overflow: hidden;
   height: 286px;
 }
 a:link{
   color: chocolate;
 }
-.item h3,p{
+.item h3,.item p{
   text-align: center;
 } 
 input[type=button], input[type=submit], input[type=reset], button {

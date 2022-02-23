@@ -13,7 +13,7 @@ listToys = JSON.parse(localStorage.getItem("shopList"))
 let menu = document.getElementById("shop-menu")
 for (let i = 0; i <= listToys.length; i++) {
     menu.innerHTML+=` <a href="./shop${i}.html"><div class="item">
-    <img src="${listToys[i].img}" alt="">
+    <div class="main-img"><img src="${listToys[i].img}" alt=""></div>
    <h3>${listToys[i].name}</h3><hr>
     <p>${listToys[i].price}đ/piece</p>
 </div></a>`
