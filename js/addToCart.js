@@ -20,7 +20,7 @@ function addToCart() {
   let realCart = [];
   if (quantity === "" ) {
     alert("vui lòng nhập số lượng");}
-  else if ( quantity < 0 ) {
+  else if ( quantity <= 0 ) {
       alert("vui lòng nhập số lượng > 0");
   } else {
     alert(`đã thêm ${list[idex - 1].name} vào giỏ hàng`);
@@ -73,7 +73,7 @@ function renderRealCart() {
  
   </div>`;
   }
-  if(table.innerHTML == ""){
+  if(table.innerHTML == "" ){
     document.getElementById("payment-button").style.display = "none"
     document.getElementById("total").style.border ="none"
     table.innerHTML = `<h1 style="text=align:center;    margin: 153px;" >Chưa có sản phầm nào trong giỏ hàng ! Vui lòng đi mua sắm</h1>`

@@ -1,5 +1,7 @@
 let userDetails = JSON.parse(localStorage.getItem("user"))
 let bill = document.getElementById("bill")
+let details = document.getElementById("user-details")
+let total_noti = document.getElementById("total-noti")
 function renderBill(){
     let cart = [];
     let total = 0
@@ -9,27 +11,27 @@ function renderBill(){
         cart.push(item);
       }
     }
-    bill.innerHTML += `    
+    details.innerHTML += `    
     <h3>Tên khách hàng : ${userDetails.name}</h3>
     <h3>Số điện thoại đặt hàng : ${userDetails.phone}</h3>
     <h3>Địa chỉ : ${userDetails.adr}</h3>
     <h3>Thành phố : ${userDetails.city} </h3>
     <h3>Emails : ${userDetails.email}</h3>
     <hr>
-    <h1>ĐƠN HÀNG CỦA BẠN</h1>
+    <h1 style="text-align:center;border:2px solid #009900; margin-top:20px">ĐƠN HÀNG CỦA BẠN</h1>
     `
     for (let j = 0; j < cart.length; j++) {
       total+=cart[j][0].price
       bill.innerHTML += `
-  <div class="item">
-  <img src="${cart[j][0].img}"alt="">
+    <div class="item">
+    <img src="${cart[j][0].img}"alt="">
       <h3>${cart[j][0].name}</h3>
       <P>quantity : ${cart[j][0].quantity}</P>
       <p>price: ${cart[j][0].price}đ</p>
     </div> <br> `;
     
     }
-    bill.innerHTML +=`<h1 style="color:#660000;text-align:center;font-size: 24px;border:10px solid black;padding: 2rem 1rem;min-height: 3em;background: #ffd73e33;">Tổng số tiền phải trả ${total}VNĐ ✨</h1><hr> ` 
+    total_noti.innerHTML +=`<h1 style="color:#660000; margin-top:20px;text-align:center;font-size: 24px;border:10px solid black;padding: 2rem 1rem;min-height: 3em;background: #ffd73e33;">Tổng số tiền phải trả ${total}VNĐ ✨</h1><hr> ` 
     resetLocalStorage()    
 }
 

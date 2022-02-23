@@ -8,6 +8,7 @@
     position: sticky;
     top: 0px;
     width: 1170px;
+    z-index: 1;
 }
 
 a {
@@ -22,6 +23,7 @@ html {
   list-style: none;
   margin: auto;
   line-height: 46px;
+  z-index: 1;
 }
 #wrapper {
   background-color: white;
@@ -163,4 +165,7 @@ input[type=button], input[type=submit], input[type=reset], button {
   margin: 20px;
   border: #009900 solid 1px;
   padding: 20px
+}
+input[type=number]{
+  height: 48px;
 }
